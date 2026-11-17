@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', Arial, sans-serif; background: #f5f8f3; color: #25382c; line-height: 1.7; }
+.hero { min-height: 560px; background: linear-gradient(90deg, rgba(8,35,23,.94), rgba(8,35,23,.38)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat; color: white; }
+.navbar { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 7%; background:rgba(8,35,23,.45); }
+.logo { font-size:25px; font-weight:800; color:#d8ef9a; text-decoration:none; white-space:nowrap; }
+.nav-links { display:flex; align-items:center; gap:17px; flex-wrap:wrap; }
+.nav-links a { color:white; text-decoration:none; font-size:13px; font-weight:500; }
+.nav-links a:hover { color:#d8ef9a; }
+.nav-links button { margin:0; padding:8px 12px; }
+#logoutButton { display:none; }
+.hero-content { max-width:850px; padding:100px 7% 110px; }
+.hero-tag,.section-tag { font-size:12px; font-weight:700; letter-spacing:2px; color:#a5cb72; }
+.hero-content h1 { font-size:clamp(34px,5vw,60px); line-height:1.2; margin:20px 0; }
+.hero-content p { max-width:550px; color:#e0e9df; font-size:16px; margin-bottom:30px; }
+.hero-button { display:inline-block; background:#a8cf70; color:#173722; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:700; }
+.hero-button:hover { background:#c8e79d; }
+section { padding:75px 7%; }
+section h2 { font-size:clamp(26px,3vw,36px); color:#17492b; margin:10px 0 15px; }
+.intro-section,.animals-section,.form-section,.about-section,.extra-section,.habitat-section,.conservation-section,.quiz-section { text-align:center; }
+.intro-section>p,.section-description { max-width:680px; margin:0 auto 35px; color:#647469; }
+.features { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:1150px; margin:40px auto 0; }
+.feature,.habitat-card,.conservation-grid article { background:white; padding:30px 20px; border-radius:16px; box-shadow:0 5px 20px rgba(0,0,0,.05); }
+.feature span,.habitat-card span,.conservation-grid span { font-size:38px; }
+.feature h3,.habitat-card h3,.conservation-grid h3 { color:#1e5934; margin:12px 0 8px; }
+.feature p,.habitat-card p,.conservation-grid p { color:#647469; font-size:14px; }
+.extra-section { background:#f5f8f3; }
+.category-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; max-width:1100px; margin:30px auto 0; }
+.category-card { display:flex; flex-direction:column; align-items:center; gap:7px; background:white; color:#28583a; padding:22px 12px; border:1px solid #dce8d6; border-radius:14px; box-shadow:0 5px 18px rgba(0,0,0,.05); }
+.category-card span { font-size:32px; }
+.category-card strong { font-size:15px; }
+.category-card small { color:#718075; font-weight:400; }
+.category-card.active-category { background:#e1efd6; border:2px solid #6e9e50; }
+.small-note { color:#738075; font-size:12px; margin:18px auto 0; }
+.animals-section { background:#eaf1e6; }
+#search { width:100%; max-width:560px; padding:16px 20px; border:1px solid #cbdcc6; border-radius:12px; background:white; font-family:inherit; font-size:15px; margin:10px auto 18px; }
+#search:focus,select:focus { outline:2px solid #87b66a; }
+.filter-row { display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+.filter-row label { font-size:14px; font-weight:600; color:#315b3e; }
+.filter-row select { min-width:190px; padding:10px 13px; border:1px solid #cbdcc6; border-radius:8px; background:white; font-family:inherit; }
+.result-count { color:#647469; font-size:13px; margin-bottom:18px; }
+#animalData { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:25px; max-width:1250px; width:100%; margin:auto; text-align:left; }
+.animal-card { background:white; border-radius:16px; padding:20px; box-shadow:0 6px 22px rgba(0,0,0,.07); border:1px solid #e0e9db; transition:transform .25s; overflow-wrap:anywhere; }
+.animal-card:hover { transform:translateY(-5px); }
+.animal-card img,.animal-image { display:block; width:100%; height:230px; object-fit:cover; object-position:center; border-radius:12px; margin-bottom:17px; background:#e8f0e5; }
+.animal-card h2,.animal-card h3 { color:#194e2f; font-size:21px; margin-bottom:13px; padding-bottom:10px; border-bottom:1px solid #e4ece1; }
+.animal-card p { font-size:13px; color:#536358; margin-bottom:9px; }
+.animal-card strong { color:#28583a; }
+button { padding:11px 16px; border:none; border-radius:8px; font-family:inherit; font-size:13px; font-weight:600; cursor:pointer; margin:10px 6px 0 0; background:#23663c; color:white; }
+button:hover { filter:brightness(.92); }
+button:focus-visible,a:focus-visible { outline:3px solid #a5cb72; outline-offset:3px; }
+.animal-card .edit-button { background:#2476b8; }
+.animal-card .delete-button { background:#c74747; }
+.secondary-button { background:#647469; }
+.endangered-section { background:#fff8ee; }
+.mini-animal-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; max-width:1150px; margin:auto; text-align:left; }
+.mini-animal-grid .animal-card { padding:16px; }
+.mini-animal-grid .animal-card img { height:180px; }
+.habitat-section { background:#eaf1e6; }
+.habitat-grid,.conservation-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; max-width:1150px; margin:35px auto 0; }
+.habitat-card { border-bottom:4px solid #9cbe7a; }
+.conservation-section { background:#f5f8f3; }
+.conservation-grid article { border:1px solid #e2eadf; }
+.quiz-section { background:#eaf1e6; }
+.quiz-box { max-width:650px; margin:30px auto 0; padding:30px; background:white; border-radius:18px; box-shadow:0 8px 25px rgba(0,0,0,.07); text-align:left; }
+.quiz-top { display:flex; justify-content:space-between; gap:15px; color:#65806a; font-size:13px; font-weight:600; }
+.quiz-box h3 { color:#204d30; font-size:19px; margin:24px 0 18px; }
+.quiz-options { display:grid; gap:10px; }
+.quiz-option { width:100%; text-align:left; margin:0; padding:13px 16px; background:#f1f6ed; color:#294b33; border:1px solid #dce8d6; }
+.quiz-option:hover:not(:disabled) { background:#e2efd8; }
+.quiz-option:disabled { cursor:default; opacity:1; }
+.quiz-option.correct-answer { background:#d9efda; border:1px solid #65a56b; }
+.quiz-option.wrong-answer { background:#f8dddd; border:1px solid #d37b7b; }
+.quiz-feedback { min-height:28px; margin-top:15px; color:#315b3e; font-weight:600; font-size:14px; }
+#nextQuestion:disabled { opacity:.45; cursor:not-allowed; }
+.form-section { background:#f5f8f3; }
+#animalForm { max-width:680px; margin:35px auto 0; padding:35px; border-radius:18px; background:white; box-shadow:0 8px 30px rgba(0,0,0,.08); text-align:left; }
+#animalForm label { display:block; font-weight:600; margin:15px 0 7px; color:#244e33; }
+#animalForm input,#animalForm textarea { width:100%; padding:13px 15px; border:1px solid #d4dfd0; border-radius:9px; font-family:inherit; font-size:14px; }
+#animalForm input:focus,#animalForm textarea:focus { outline:2px solid #a5cb72; }
+#animalForm textarea { min-height:120px; resize:vertical; }
+#animalForm button { width:100%; padding:15px; background:#23663c; font-size:15px; margin-top:25px; }
+.about-section { background:#e6eee2; }
+.about-section p { max-width:800px; margin:15px auto; color:#506554; }
+footer { background:#103521; color:white; padding:35px 20px; text-align:center; }
+footer h3 { color:#b9d98d; margin-bottom:10px; }
+footer p { font-size:13px; color:#d3dfd2; margin:5px 0; }
+.empty-message { grid-column:1/-1; text-align:center; color:#647469; padding:25px; }
+@media(max-width:900px) { .navbar { flex-direction:column; } .nav-links { justify-content:center; } }
+@media(max-width:700px) {
+    .hero-content { padding:75px 7%; }
+    .features { grid-template-columns:1fr; }
+    section { padding:50px 5%; }
+    #animalForm { padding:22px; }
+    .animal-card button { width:100%; margin-right:0; }
+    .quiz-box { padding:22px; }
+}
